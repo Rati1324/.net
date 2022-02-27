@@ -1,0 +1,12 @@
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\bin\FirstWcfService.dll.config
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\bin\FirstWcfService.dll
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\bin\FirstWcfService.pdb
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\bin\EntityFramework.dll
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\bin\EntityFramework.SqlServer.dll
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\bin\EntityFramework.xml
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\bin\EntityFramework.SqlServer.xml
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\obj\Debug\FirstWcfService.csproj.AssemblyReference.cache
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\obj\Debug\FirstWcfService.csproj.CoreCompileInputs.cache
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\obj\Debug\FirstWcfService.csproj.CopyComplete
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\obj\Debug\FirstWcfService.dll
+C:\Users\GvanTSU\source\repos\FirstWcfServiceSolution\FirstWcfService\obj\Debug\FirstWcfService.pdb
