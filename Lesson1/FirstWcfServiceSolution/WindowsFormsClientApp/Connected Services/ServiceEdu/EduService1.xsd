@@ -8,10 +8,8 @@
   <xs:element name="ArrayOfStudent" nillable="true" type="tns:ArrayOfStudent" />
   <xs:complexType name="Student">
     <xs:sequence>
-      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="GPA" type="xs:float" />
-      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Student" nillable="true" type="tns:Student" />

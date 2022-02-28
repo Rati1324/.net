@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="7O6Qz25VHGAwA1IZQHFD50771FbPGw4F2dEB3yAVPtg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="CvQu52fwppPLsbl2HK/qomV1156Ql6D3sbEOXHCPr9I=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IEduService">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IEduService" contract="ServiceReference1.IEduService" bindingType="basicHttpBinding" address="http://localhost:60174/EduService.svc" bindingConfiguration="BasicHttpBinding_IEduService">
+    <endpoint name="BasicHttpBinding_IEduService" contract="ServiceEdu.IEduService" bindingType="basicHttpBinding" address="http://localhost:60174/EduService.svc" bindingConfiguration="BasicHttpBinding_IEduService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:60174/EduService.svc</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IEduService</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ServiceReference1.IEduService</serializedValue>
+          <serializedValue>ServiceEdu.IEduService</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

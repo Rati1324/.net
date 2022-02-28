@@ -29,80 +29,63 @@ namespace WindowsFormsClientApp
         /// </summary>
         private void InitializeComponent()
         {
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.butRequest = new System.Windows.Forms.Button();
-			this.txtBoxID = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// dataGridView1
-			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(8, 64);
-			this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 62;
-			this.dataGridView1.RowTemplate.Height = 28;
-			this.dataGridView1.Size = new System.Drawing.Size(720, 213);
-			this.dataGridView1.TabIndex = 0;
-			// 
-			// butRequest
-			// 
-			this.butRequest.Location = new System.Drawing.Point(498, 23);
-			this.butRequest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.butRequest.Name = "butRequest";
-			this.butRequest.Size = new System.Drawing.Size(107, 27);
-			this.butRequest.TabIndex = 1;
-			this.butRequest.Text = "Make Request";
-			this.butRequest.UseVisualStyleBackColor = true;
-			this.butRequest.Click += new System.EventHandler(this.butRequest_Click);
-			// 
-			// txtBoxID
-			// 
-			this.txtBoxID.Location = new System.Drawing.Point(87, 27);
-			this.txtBoxID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.txtBoxID.Name = "txtBoxID";
-			this.txtBoxID.Size = new System.Drawing.Size(341, 20);
-			this.txtBoxID.TabIndex = 2;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(8, 27);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(56, 13);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "Find by Id:";
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(619, 23);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(109, 27);
-			this.button1.TabIndex = 4;
-			this.button1.Text = "Add Student";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
-			// 
-			// Form1
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(778, 351);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.txtBoxID);
-			this.Controls.Add(this.butRequest);
-			this.Controls.Add(this.dataGridView1);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.Name = "Form1";
-			this.Text = "Form1";
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.butRequest = new System.Windows.Forms.Button();
+            this.txtBoxID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 99);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(1021, 328);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // butRequest
+            // 
+            this.butRequest.Location = new System.Drawing.Point(721, 33);
+            this.butRequest.Name = "butRequest";
+            this.butRequest.Size = new System.Drawing.Size(312, 42);
+            this.butRequest.TabIndex = 1;
+            this.butRequest.Text = "Make Request";
+            this.butRequest.UseVisualStyleBackColor = true;
+            this.butRequest.Click += new System.EventHandler(this.butRequest_Click);
+            // 
+            // txtBoxID
+            // 
+            this.txtBoxID.Location = new System.Drawing.Point(130, 41);
+            this.txtBoxID.Name = "txtBoxID";
+            this.txtBoxID.Size = new System.Drawing.Size(509, 26);
+            this.txtBoxID.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Find by Id:";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1054, 439);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtBoxID);
+            this.Controls.Add(this.butRequest);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,7 +95,6 @@ namespace WindowsFormsClientApp
         private System.Windows.Forms.Button butRequest;
         private System.Windows.Forms.TextBox txtBoxID;
         private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button1;
-	}
+    }
 }
 

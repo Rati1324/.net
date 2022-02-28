@@ -47,13 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddStudentForm.Designer.cs">
-      <DependentUpon>AddStudentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\ServiceEdu\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -66,9 +60,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddStudentForm.resx">
-      <DependentUpon>AddStudentForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,17 +72,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\ServiceReference1\EduService.wsdl" />
-    <None Include="Connected Services\ServiceReference1\EduService.xsd">
+    <None Include="Connected Services\ServiceEdu\EduService.wsdl" />
+    <None Include="Connected Services\ServiceEdu\EduService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\EduService1.xsd">
+    <None Include="Connected Services\ServiceEdu\EduService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\EduService2.xsd">
+    <None Include="Connected Services\ServiceEdu\EduService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\WindowsFormsClientApp.ServiceReference1.Student.datasource">
+    <None Include="Connected Services\ServiceEdu\WindowsFormsClientApp.ServiceEdu.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -111,19 +102,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceEdu\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\EduService.disco" />
+    <None Include="Connected Services\ServiceEdu\EduService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceEdu\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceEdu\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\ServiceEdu\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

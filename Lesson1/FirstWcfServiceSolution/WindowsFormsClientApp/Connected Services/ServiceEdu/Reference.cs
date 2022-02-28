@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WindowsFormsClientApp.ServiceReference1 {
+namespace WindowsFormsClientApp.ServiceEdu {
     using System.Runtime.Serialization;
     using System;
     
@@ -23,16 +23,10 @@ namespace WindowsFormsClientApp.ServiceReference1 {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FirstNameField;
+        private string FullNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private float GPAField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime dobField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -45,14 +39,14 @@ namespace WindowsFormsClientApp.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FirstName {
+        public string FullName {
             get {
-                return this.FirstNameField;
+                return this.FullNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
-                    this.FirstNameField = value;
-                    this.RaisePropertyChanged("FirstName");
+                if ((object.ReferenceEquals(this.FullNameField, value) != true)) {
+                    this.FullNameField = value;
+                    this.RaisePropertyChanged("FullName");
                 }
             }
         }
@@ -70,32 +64,6 @@ namespace WindowsFormsClientApp.ServiceReference1 {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime dob {
-            get {
-                return this.dobField;
-            }
-            set {
-                if ((this.dobField.Equals(value) != true)) {
-                    this.dobField = value;
-                    this.RaisePropertyChanged("dob");
-                }
-            }
-        }
-        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -107,35 +75,29 @@ namespace WindowsFormsClientApp.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IEduService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceEdu.IEduService")]
     public interface IEduService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/GetAllStudents", ReplyAction="http://tempuri.org/IEduService/GetAllStudentsResponse")]
-        WindowsFormsClientApp.ServiceReference1.Student[] GetAllStudents();
+        WindowsFormsClientApp.ServiceEdu.Student[] GetAllStudents();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/GetAllStudents", ReplyAction="http://tempuri.org/IEduService/GetAllStudentsResponse")]
-        System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceReference1.Student[]> GetAllStudentsAsync();
+        System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceEdu.Student[]> GetAllStudentsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/GetStudentById", ReplyAction="http://tempuri.org/IEduService/GetStudentByIdResponse")]
-        WindowsFormsClientApp.ServiceReference1.Student GetStudentById(int id);
+        WindowsFormsClientApp.ServiceEdu.Student GetStudentById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/GetStudentById", ReplyAction="http://tempuri.org/IEduService/GetStudentByIdResponse")]
-        System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceReference1.Student> GetStudentByIdAsync(int id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/AddNewStudent", ReplyAction="http://tempuri.org/IEduService/AddNewStudentResponse")]
-        void AddNewStudent(WindowsFormsClientApp.ServiceReference1.Student s);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/AddNewStudent", ReplyAction="http://tempuri.org/IEduService/AddNewStudentResponse")]
-        System.Threading.Tasks.Task AddNewStudentAsync(WindowsFormsClientApp.ServiceReference1.Student s);
+        System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceEdu.Student> GetStudentByIdAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEduServiceChannel : WindowsFormsClientApp.ServiceReference1.IEduService, System.ServiceModel.IClientChannel {
+    public interface IEduServiceChannel : WindowsFormsClientApp.ServiceEdu.IEduService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EduServiceClient : System.ServiceModel.ClientBase<WindowsFormsClientApp.ServiceReference1.IEduService>, WindowsFormsClientApp.ServiceReference1.IEduService {
+    public partial class EduServiceClient : System.ServiceModel.ClientBase<WindowsFormsClientApp.ServiceEdu.IEduService>, WindowsFormsClientApp.ServiceEdu.IEduService {
         
         public EduServiceClient() {
         }
@@ -156,28 +118,20 @@ namespace WindowsFormsClientApp.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public WindowsFormsClientApp.ServiceReference1.Student[] GetAllStudents() {
+        public WindowsFormsClientApp.ServiceEdu.Student[] GetAllStudents() {
             return base.Channel.GetAllStudents();
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceReference1.Student[]> GetAllStudentsAsync() {
+        public System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceEdu.Student[]> GetAllStudentsAsync() {
             return base.Channel.GetAllStudentsAsync();
         }
         
-        public WindowsFormsClientApp.ServiceReference1.Student GetStudentById(int id) {
+        public WindowsFormsClientApp.ServiceEdu.Student GetStudentById(int id) {
             return base.Channel.GetStudentById(id);
         }
         
-        public System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceReference1.Student> GetStudentByIdAsync(int id) {
+        public System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceEdu.Student> GetStudentByIdAsync(int id) {
             return base.Channel.GetStudentByIdAsync(id);
-        }
-        
-        public void AddNewStudent(WindowsFormsClientApp.ServiceReference1.Student s) {
-            base.Channel.AddNewStudent(s);
-        }
-        
-        public System.Threading.Tasks.Task AddNewStudentAsync(WindowsFormsClientApp.ServiceReference1.Student s) {
-            return base.Channel.AddNewStudentAsync(s);
         }
     }
 }

@@ -12,7 +12,7 @@ namespace WindowsFormsClientApp
 {
     public partial class Form1 : Form
     {
-        ServiceReference1.EduServiceClient client = new ServiceReference1.EduServiceClient();
+        ServiceEdu.EduServiceClient client = new ServiceEdu.EduServiceClient();
 
         public Form1()
         {
@@ -24,14 +24,15 @@ namespace WindowsFormsClientApp
             try
             {
                 if(string.IsNullOrEmpty(txtBoxID.Text))
-					dataGridView1.DataSource = client.GetAllStudents().ToList();
+
+                dataGridView1.DataSource = client.GetAllStudents().ToList();
                 else
                 {
                     int id = Convert.ToInt32(txtBoxID.Text);
 
-                    ServiceReference1.Student o = client.GetStudentById(id);
+                    ServiceEdu.Student o = client.GetStudentById(id);
 
-                    dataGridView1.DataSource = new List<ServiceReference1.Student> { o };
+                    dataGridView1.DataSource = new List<ServiceEdu.Student> { o };
                 }
             }
             catch (Exception ex)
@@ -39,10 +40,5 @@ namespace WindowsFormsClientApp
                 MessageBox.Show(ex.Message);
             }
         }
-
-		private void button1_Click(object sender, EventArgs e) {
-			AddStudentForm F = new AddStudentForm();
-			F.Show();
-		}
-	}
+    }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -17,8 +16,5 @@ namespace FirstWcfService
 
         [OperationContract]
         Student GetStudentById(int id);
-
-		[OperationContract]
-		void AddNewStudent(Student s);
     }
 }
