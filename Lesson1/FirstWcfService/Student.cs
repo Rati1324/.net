@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -14,10 +15,9 @@ namespace FirstWcfService {
 		public string FirstName { get; set; }
         [DataMember]
 		public string LastName { get; set; }
-        [DataMember]
+		[DataMember]
         public float GPA { get; set; }
 		[DataMember]
 		public DateTime dob { get; set; }
     }
-
 }
