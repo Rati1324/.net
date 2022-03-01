@@ -20,7 +20,8 @@ namespace FirstWcfService
                 {
                     Id= i.Id,
                     FullName = i.FirstName+" "+i.LastName,
-                    GPA= (float)i.GPA
+                    GPA= (float)i.GPA,
+					DateOfBirth= i.BirthDate
                 }).ToList();
             }
         }
@@ -37,5 +38,20 @@ namespace FirstWcfService
                 }).FirstOrDefault();
             }
         }
+
+		public void AddNewStudent(Student S) 
+		{
+			using (EduModel db = new EduModel()) 
+			{
+				EF.Student O = new EF.Student {
+					FirstName = S.FullName.Split(' ')[0],
+					LastName = S.FullName.Split(' ')[1],
+					BirthDate = S.DateOfBirth,
+					GPA = S.GPA
+				};
+				db.Students.Add(O);
+				db.SaveChanges();
+			}
+		}
     }
 }

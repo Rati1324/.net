@@ -16,5 +16,8 @@ namespace FirstWcfService
         
         [DataMember]
         public float GPA { get; set; }
+
+		[DataMember]
+		public DateTime DateOfBirth { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1cf21e96-a59a-4bc5-af03-652cdcd22d61" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="22b137eb-4eb3-4f25-bda5-de5476805074" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:60174/EduService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EduService.xsd" MetadataType="Schema" ID="95a5236e-e18f-4bfc-8f89-c28fb169c012" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?xsd=xsd0" />
-    <MetadataFile FileName="EduService1.xsd" MetadataType="Schema" ID="ea338f87-c100-4a9f-b232-22e69bb16cd9" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?xsd=xsd2" />
-    <MetadataFile FileName="EduService.wsdl" MetadataType="Wsdl" ID="abbef2c0-145b-4ff0-8737-6ea69efbc973" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?wsdl" />
-    <MetadataFile FileName="EduService.disco" MetadataType="Disco" ID="a7109f32-7d2c-4749-b9ab-6144eb5e4093" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?disco" />
-    <MetadataFile FileName="EduService2.xsd" MetadataType="Schema" ID="d28f86e5-102c-4a56-8ebc-edab0904ed72" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EduService.xsd" MetadataType="Schema" ID="0f5c791b-6466-474a-9096-90d3c1fc5b37" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EduService1.xsd" MetadataType="Schema" ID="d7f5af00-ac80-402e-9039-8353fe8e3277" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EduService.wsdl" MetadataType="Wsdl" ID="bcb6cedf-acd4-431f-b0c0-c8d8f59b0e91" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?wsdl" />
+    <MetadataFile FileName="EduService.disco" MetadataType="Disco" ID="99c22d49-83d1-4797-9f64-20f4c0e3d52e" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?disco" />
+    <MetadataFile FileName="EduService2.xsd" MetadataType="Schema" ID="cbb96055-de2b-454a-a29a-5da48ee08240" SourceId="1" SourceUrl="http://localhost:60174/EduService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -27,4 +27,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddNewStudent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/FirstWcfService" minOccurs="0" name="S" nillable="true" type="q3:Student" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewStudentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

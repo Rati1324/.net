@@ -23,6 +23,9 @@ namespace WindowsFormsClientApp.ServiceEdu {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateOfBirthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FullNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -35,6 +38,19 @@ namespace WindowsFormsClientApp.ServiceEdu {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DateOfBirth {
+            get {
+                return this.DateOfBirthField;
+            }
+            set {
+                if ((this.DateOfBirthField.Equals(value) != true)) {
+                    this.DateOfBirthField = value;
+                    this.RaisePropertyChanged("DateOfBirth");
+                }
             }
         }
         
@@ -89,6 +105,12 @@ namespace WindowsFormsClientApp.ServiceEdu {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/GetStudentById", ReplyAction="http://tempuri.org/IEduService/GetStudentByIdResponse")]
         System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceEdu.Student> GetStudentByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/AddNewStudent", ReplyAction="http://tempuri.org/IEduService/AddNewStudentResponse")]
+        void AddNewStudent(WindowsFormsClientApp.ServiceEdu.Student S);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEduService/AddNewStudent", ReplyAction="http://tempuri.org/IEduService/AddNewStudentResponse")]
+        System.Threading.Tasks.Task AddNewStudentAsync(WindowsFormsClientApp.ServiceEdu.Student S);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -132,6 +154,14 @@ namespace WindowsFormsClientApp.ServiceEdu {
         
         public System.Threading.Tasks.Task<WindowsFormsClientApp.ServiceEdu.Student> GetStudentByIdAsync(int id) {
             return base.Channel.GetStudentByIdAsync(id);
+        }
+        
+        public void AddNewStudent(WindowsFormsClientApp.ServiceEdu.Student S) {
+            base.Channel.AddNewStudent(S);
+        }
+        
+        public System.Threading.Tasks.Task AddNewStudentAsync(WindowsFormsClientApp.ServiceEdu.Student S) {
+            return base.Channel.AddNewStudentAsync(S);
         }
     }
 }

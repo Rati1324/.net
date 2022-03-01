@@ -29,9 +29,7 @@ namespace WindowsFormsClientApp
                 else
                 {
                     int id = Convert.ToInt32(txtBoxID.Text);
-
                     ServiceEdu.Student o = client.GetStudentById(id);
-
                     dataGridView1.DataSource = new List<ServiceEdu.Student> { o };
                 }
             }
@@ -40,5 +38,11 @@ namespace WindowsFormsClientApp
                 MessageBox.Show(ex.Message);
             }
         }
-    }
+
+		private void addBtn_Click(object sender, EventArgs e) 
+		{
+			addStudentForm F = new addStudentForm();
+			F.Show();
+		}
+	}
 }

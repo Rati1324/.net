@@ -18,3 +18,4 @@ C:\Users\rati\Documents\programming\.net\Lesson1\FirstWcfServiceSolution\Windows
 C:\Users\rati\Documents\programming\.net\Lesson1\FirstWcfServiceSolution\WindowsFormsClientApp\obj\Debug\WindowsFormsClientApp.csproj.CoreCompileInputs.cache
 C:\Users\rati\Documents\programming\.net\Lesson1\FirstWcfServiceSolution\WindowsFormsClientApp\obj\Debug\WindowsFormsClientApp.exe
 C:\Users\rati\Documents\programming\.net\Lesson1\FirstWcfServiceSolution\WindowsFormsClientApp\obj\Debug\WindowsFormsClientApp.pdb
+C:\Users\rati\Documents\programming\.net\Lesson1\FirstWcfServiceSolution\WindowsFormsClientApp\obj\Debug\WindowsFormsClientApp.addStudentForm.resources
