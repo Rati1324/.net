@@ -50,20 +50,22 @@ namespace EduClientApp
 		}
 
 		private void deleteStudentToolStripMenuItem_Click(object sender, EventArgs e) {
-			int studentId = (int)studentGrid.SelectedRows[0].Cells[0].Value;
+			try {
+				int studentId = (int)studentGrid.SelectedRows[0].Cells[0].Value;
 
-			ASCIIEncoding encoding = new ASCIIEncoding();
+				ASCIIEncoding encoding = new ASCIIEncoding();
 
-			HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{url}/DeleteStudent/{studentId}");
-			request.Method = "DELETE";
-			Stream newStream = request.GetRequestStream();
-			newStream.Close();
+				HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{url}/DeleteStudent/{studentId}");
+				request.Method = "DELETE";
+				Stream newStream = request.GetRequestStream();
+				newStream.Close();
 
-			WebResponse response = request.GetResponse();
-			Stream responseStream = response.GetResponseStream();
-			StreamReader sr = new StreamReader(responseStream);
-
+				WebResponse response = request.GetResponse();
+				Stream responseStream = response.GetResponseStream();
+				StreamReader sr = new StreamReader(responseStream);
+			} catch (Exception ex) {
+				MessageBox.Show(ex.Message);
+			}
 		}
-
 	}
 }

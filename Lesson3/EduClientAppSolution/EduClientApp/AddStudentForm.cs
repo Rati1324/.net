@@ -39,22 +39,26 @@ namespace EduClientApp {
 				GPA = float.Parse(gpaInput.Text),
 				BirthDate = dobInput.Value,
 			};
-			string postData = HelpMethods.Serialize<StudentDTO>(S).OuterXml;
-			ASCIIEncoding encoding = new ASCIIEncoding();
-			byte[] data = encoding.GetBytes(postData);
 
-			HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{url}/AddNewStudent");
-			request.Method = "POST";
-			request.ContentType = "application/xml";
-			request.ContentLength = data.Length;
-			Stream newStream = request.GetRequestStream();
-			newStream.Write(data, 0, data.Length);
-			newStream.Close();
+			try {
+				string postData = HelpMethods.Serialize<StudentDTO>(S).OuterXml;
+				ASCIIEncoding encoding = new ASCIIEncoding();
+				byte[] data = encoding.GetBytes(postData);
 
-			WebResponse response = request.GetResponse();
-			Stream responseStream = response.GetResponseStream();
-			StreamReader sr = new StreamReader(responseStream);
-			string s = sr.ReadToEnd();
+				HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{url}/AddNewStudent");
+				request.Method = "POST";
+				request.ContentType = "application/xml";
+				request.ContentLength = data.Length;
+				Stream newStream = request.GetRequestStream();
+				newStream.Write(data, 0, data.Length);
+				newStream.Close();
+				WebResponse response = request.GetResponse();
+				Stream responseStream = response.GetResponseStream();
+				StreamReader sr = new StreamReader(responseStream);
+				string s = sr.ReadToEnd();
+			} catch (Exception ex) {
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void updateBtn_Click(object sender, EventArgs e) {
@@ -66,22 +70,28 @@ namespace EduClientApp {
 				BirthDate = dobInput.Value,
 			};
 
-			string postData = HelpMethods.Serialize<StudentDTO>(S).OuterXml;
-			ASCIIEncoding encoding = new ASCIIEncoding();
-			byte[] data = encoding.GetBytes(postData);
+			try {
+				string postData = HelpMethods.Serialize<StudentDTO>(S).OuterXml;
 
-			HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{url}/UpdateStudent");
-			request.Method = "PUT";
-			request.ContentType = "application/xml";
-			request.ContentLength = data.Length;
-			Stream newStream = request.GetRequestStream();
-			newStream.Write(data, 0, data.Length);
-			newStream.Close();
+				ASCIIEncoding encoding = new ASCIIEncoding();
+				byte[] data = encoding.GetBytes(postData);
 
-			WebResponse response = request.GetResponse();
-			Stream responseStream = response.GetResponseStream();
-			StreamReader sr = new StreamReader(responseStream);
-			string s = sr.ReadToEnd();
+				HttpWebRequest request = (HttpWebRequest)WebRequest.Create($"{url}/UpdateStudent");
+				request.Method = "PUT";
+				request.ContentType = "application/xml";
+				request.ContentLength = data.Length;
+				Stream newStream = request.GetRequestStream();
+				newStream.Write(data, 0, data.Length);
+				newStream.Close();
+
+				WebResponse response = request.GetResponse();
+				Stream responseStream = response.GetResponseStream();
+				StreamReader sr = new StreamReader(responseStream);
+				string s = sr.ReadToEnd();
+
+			} catch (Exception ex) {
+				MessageBox.Show(ex.Message);
+			}
 		}
 	}
 }
