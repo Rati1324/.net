@@ -25,7 +25,7 @@ namespace WindowsFormsClientApp
             {
                 if(string.IsNullOrEmpty(txtBoxID.Text))
 
-                dataGridView1.DataSource = client.GetAllStudents().ToList();
+                dataGridView1.DataSource = client.GetAllStudents();
                 else
                 {
                     int id = Convert.ToInt32(txtBoxID.Text);

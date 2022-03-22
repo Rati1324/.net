@@ -12,19 +12,18 @@ namespace FirstWcfService
     // NOTE: In order to launch WCF Test Client for testing this service, please select EduService.svc or EduService.svc.cs at the Solution Explorer and start debugging.
     public class EduService : IEduService
     {
-        public List<Student> GetAllStudents()
-        {
-            using(EduModel db = new EduModel())
-            {
-                return db.Students.Select(i => new Student
-                {
-                    Id= i.Id,
-                    FullName = i.FirstName+" "+i.LastName,
-                    GPA= (float)i.GPA,
-					DateOfBirth= i.BirthDate
-                }).ToList();
-            }
-        }
+        //public List<Student> GetAllStudents()
+        //{
+        //    using(EduModel db = new EduModel())
+        //    {
+        //        return db.Students.Select(i => new Student
+        //        {
+        //            FullName = i.FirstName+" "+i.LastName,
+        //            GPA= (float)i.GPA,
+		//			DateOfBirth= i.BirthDate
+        //        }).ToList();
+        //    }
+        //}
 
         public Student GetStudentById(int id)
         {
@@ -53,5 +52,8 @@ namespace FirstWcfService
 				db.SaveChanges();
 			}
 		}
+
+		public int Addition(int x, int y)
+			=> x + y;
     }
 }

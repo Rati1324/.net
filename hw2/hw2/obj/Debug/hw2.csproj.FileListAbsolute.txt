@@ -1,0 +1,7 @@
+C:\Users\rati\Documents\programming\.net\hw2\hw2\bin\hw2.dll.config
+C:\Users\rati\Documents\programming\.net\hw2\hw2\bin\hw2.dll
+C:\Users\rati\Documents\programming\.net\hw2\hw2\bin\hw2.pdb
+C:\Users\rati\Documents\programming\.net\hw2\hw2\obj\Debug\hw2.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\hw2\hw2\obj\Debug\hw2.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\hw2\hw2\obj\Debug\hw2.dll
+C:\Users\rati\Documents\programming\.net\hw2\hw2\obj\Debug\hw2.pdb

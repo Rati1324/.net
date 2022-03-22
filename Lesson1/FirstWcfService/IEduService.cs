@@ -19,5 +19,8 @@ namespace FirstWcfService
 
 		[OperationContract]
 		void AddNewStudent(Student S);
+
+		[OperationContract]
+		int Addition(int x, int y);
     }
 }
