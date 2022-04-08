@@ -1,0 +1,9 @@
+C:\Users\rati\source\repos\WcfClient\WcfClient\bin\Debug\WcfClient.exe.config
+C:\Users\rati\source\repos\WcfClient\WcfClient\bin\Debug\WcfClient.exe
+C:\Users\rati\source\repos\WcfClient\WcfClient\bin\Debug\WcfClient.pdb
+C:\Users\rati\source\repos\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.AssemblyReference.cache
+C:\Users\rati\source\repos\WcfClient\WcfClient\obj\Debug\WcfClient.csproj.CoreCompileInputs.cache
+C:\Users\rati\source\repos\WcfClient\WcfClient\obj\Debug\WcfClient.exe
+C:\Users\rati\source\repos\WcfClient\WcfClient\obj\Debug\WcfClient.pdb
+C:\Users\rati\source\repos\WcfClient\WcfClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rati\source\repos\WcfClient\WcfClient\bin\Debug\Newtonsoft.Json.xml

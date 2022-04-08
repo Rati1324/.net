@@ -1,0 +1,7 @@
+C:\Users\rati\Documents\programming\.net\Lesson3\EduClientAppSolution\XmlStuff\bin\Debug\XmlStuff.exe.config
+C:\Users\rati\Documents\programming\.net\Lesson3\EduClientAppSolution\XmlStuff\bin\Debug\XmlStuff.exe
+C:\Users\rati\Documents\programming\.net\Lesson3\EduClientAppSolution\XmlStuff\bin\Debug\XmlStuff.pdb
+C:\Users\rati\Documents\programming\.net\Lesson3\EduClientAppSolution\XmlStuff\obj\Debug\XmlStuff.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\Lesson3\EduClientAppSolution\XmlStuff\obj\Debug\XmlStuff.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\Lesson3\EduClientAppSolution\XmlStuff\obj\Debug\XmlStuff.exe
+C:\Users\rati\Documents\programming\.net\Lesson3\EduClientAppSolution\XmlStuff\obj\Debug\XmlStuff.pdb
