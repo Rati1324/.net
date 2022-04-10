@@ -1,0 +1,11 @@
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\obj\Debug\MidTerm.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\obj\Debug\MidTerm.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\bin\MidTerm.dll.config
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\bin\MidTerm.dll
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\bin\MidTerm.pdb
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\bin\EntityFramework.dll
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\bin\EntityFramework.SqlServer.dll
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\bin\EntityFramework.xml
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\bin\EntityFramework.SqlServer.xml
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\obj\Debug\MidTerm.dll
+C:\Users\rati\Documents\programming\.net\MidTerm\MidTerm\obj\Debug\MidTerm.pdb

@@ -1,0 +1,13 @@
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\bin\Debug\MidTermClient.exe.config
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\bin\Debug\MidTermClient.exe
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\bin\Debug\MidTermClient.pdb
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.Form1.resources
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.Properties.Resources.resources
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.csproj.GenerateResource.cache
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.exe
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.pdb
+C:\Users\rati\Documents\programming\.net\MidTermClient\MidTermClient\obj\Debug\MidTermClient.AddPhoneForm.resources
