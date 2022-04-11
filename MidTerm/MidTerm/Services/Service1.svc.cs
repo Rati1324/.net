@@ -17,9 +17,9 @@ namespace MidTerm {
 					Name = s.name,
 					CpuSpeed = (float)s.CpuSpeed,
 					Price = (decimal)s.price,
-					SimCardTypeId = s.simCardTypeId,
+					SimCardType = s.SimCardType.name,
 					RAM = s.RAM,
-					BrandId = s.Brand.name,
+					Brand = s.Brand.name,
 				}).ToList();
 			}
 		}
@@ -27,12 +27,15 @@ namespace MidTerm {
 		public void AddNewPhone(SmartphoneDTO s) {
 			try {
 				using (Model1 db = new Model1()) {
+					int brandId = db.Brands.Where(b => b.name == s.Brand).Select(i => i.id).First();
+					int simCardTypeId = db.SimCardTypes.Where(sim => sim.name == s.SimCardType).Select(i => i.id).First();
+
 					Smartphone sp = new Smartphone {
 						name = s.Name,
 						CpuSpeed = s.CpuSpeed,
 						price = s.Price,
-						brandId = s.BrandId,
-						simCardTypeId = s.SimCardTypeId,
+						brandId = brandId,
+						simCardTypeId = simCardTypeId,
 						RAM = s.RAM,
 					};
 					db.Smartphones.Add(sp);
@@ -41,7 +44,6 @@ namespace MidTerm {
 			} catch (Exception) {
 				throw;
 			}
-			
 		}
 
 		public void DeletePhone(string id) {
@@ -63,11 +65,34 @@ namespace MidTerm {
 			}
 		}
 
-		public List<List<List<string>>> GetFields() {
+		public void EditPhone(SmartphoneDTO s) {
+			try {
+				using (Model1 db = new Model1()) {
+					if (!db.Smartphones.Any(i => i.id == s.Id))
+						throw new Exception("Phone not found");
+
+					Smartphone sp = db.Smartphones.Where(i => i.id == s.Id).First();
+					int simId = db.SimCardTypes.Where(i => i.name == s.SimCardType).Select(i => i.id).First();
+					int brandId = db.Brands.Where(i => i.name == s.Brand).Select(i => i.id).First();
+
+					sp.name = s.Name;
+					sp.price = s.Price;
+					sp.RAM = s.RAM;
+					sp.simCardTypeId = simId;
+					sp.CpuSpeed = s.CpuSpeed;
+					sp.brandId = brandId;
+					db.SaveChanges();
+				}
+			} catch (Exception) {
+
+				throw;
+			}
+		}
+		public List<List<string>> GetFields() {
 			using (Model1 db = new Model1()) {
-				List<List<List<string>>> fields = new List<List<List<string>>>();
-				var simTypes = db.SimCardTypes.Select(i => new List<string>() { i.id.ToString(), i.name }).ToList();
-				var brands = db.Brands.Select(i => new List<string>() { i.id.ToString(), i.name }).ToList();
+				List<List<string>> fields = new List<List<string>>();
+				var simTypes = db.SimCardTypes.Select(i => i.name).ToList();
+				var brands = db.Brands.Select(i => i.name ).ToList();
 				fields.Add(simTypes);
 				fields.Add(brands);
 				return fields;

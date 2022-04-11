@@ -21,10 +21,14 @@ namespace MidTerm {
 
 		[OperationContract]
 		[WebGet(UriTemplate = "/GetFields", ResponseFormat = WebMessageFormat.Json)]
-		List<List<List<string>>> GetFields();
+		List<List<string>> GetFields();
 
 		[OperationContract]
         [WebInvoke(Method = "DELETE", UriTemplate = "/DeletePhone/{id}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
 		void DeletePhone(string id);
+
+		[OperationContract]
+		[WebInvoke(UriTemplate = "/EditSmartphone", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, Method = "POST", BodyStyle = WebMessageBodyStyle.Bare)]
+		void EditPhone(SmartphoneDTO s);
 	}
 }

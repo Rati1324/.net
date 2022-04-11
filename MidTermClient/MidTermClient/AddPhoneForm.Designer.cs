@@ -37,6 +37,7 @@ namespace MidTermClient {
 			this.label7 = new System.Windows.Forms.Label();
 			this.brandInput = new System.Windows.Forms.ComboBox();
 			this.simTypeInput = new System.Windows.Forms.ComboBox();
+			this.updateBtn = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// addBtn
@@ -147,11 +148,22 @@ namespace MidTermClient {
 			this.simTypeInput.Size = new System.Drawing.Size(170, 21);
 			this.simTypeInput.TabIndex = 3;
 			// 
+			// updateBtn
+			// 
+			this.updateBtn.Location = new System.Drawing.Point(399, 292);
+			this.updateBtn.Name = "updateBtn";
+			this.updateBtn.Size = new System.Drawing.Size(75, 23);
+			this.updateBtn.TabIndex = 4;
+			this.updateBtn.Text = "Update";
+			this.updateBtn.UseVisualStyleBackColor = true;
+			this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+			// 
 			// AddPhoneForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.updateBtn);
 			this.Controls.Add(this.simTypeInput);
 			this.Controls.Add(this.brandInput);
 			this.Controls.Add(this.label7);
@@ -187,5 +199,6 @@ namespace MidTermClient {
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.ComboBox brandInput;
 		private System.Windows.Forms.ComboBox simTypeInput;
+		private System.Windows.Forms.Button updateBtn;
 	}
 }

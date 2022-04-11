@@ -13,7 +13,7 @@ namespace MidTerm.DataContracts {
 		[DataMember]
 		public string Name { get; set; }
 		[DataMember]
-		public int BrandId { get; set; }
+		public string Brand { get; set; }
 		[DataMember]
 		public decimal Price { get; set; }
 		[DataMember]
@@ -21,6 +21,6 @@ namespace MidTerm.DataContracts {
 		[DataMember]
 		public float CpuSpeed { get; set; }
 		[DataMember]
-		public int SimCardTypeId { get; set; }
+		public string SimCardType { get; set; }
 	}
 }
