@@ -71,38 +71,45 @@ namespace MidTermClient {
 		}
 
 		private void addBtn_Click(object sender, EventArgs e) {
-			string fullUrl = $"{url}/AddNewSmartPhone";
-			SmartphoneDTO s = new SmartphoneDTO {
-				Name = nameInput.Text,
-				Brand = brandInput.Items[brandInput.SelectedIndex].ToString(),
-				Price = decimal.Parse(priceInput.Text),
-				RAM = Int32.Parse(ramInput.Text),
-				CpuSpeed = float.Parse(cpuInput.Text),
-				SimCardType = simTypeInput.SelectedItem.ToString(),
-			};
-			var js = JsonConvert.SerializeObject(s);
+			try {
+				string fullUrl = $"{url}/AddNewSmartPhone";
+				SmartphoneDTO s = new SmartphoneDTO {
+					Name = nameInput.Text,
+					Brand = brandInput.Items[brandInput.SelectedIndex].ToString(),
+					Price = decimal.Parse(priceInput.Text),
+					RAM = Int32.Parse(ramInput.Text),
+					CpuSpeed = float.Parse(cpuInput.Text),
+					SimCardType = simTypeInput.SelectedItem.ToString(),
+				};
+				var js = JsonConvert.SerializeObject(s);
 
-			webClient.Headers["Content-type"] = "application/json";
-			webClient.Encoding = Encoding.UTF8;
-			webClient.UploadString(fullUrl, "POST", js);
+				webClient.Headers["Content-type"] = "application/json";
+				webClient.Encoding = Encoding.UTF8;
+				webClient.UploadString(fullUrl, "POST", js);
+			} catch (Exception) {
+				throw;
+			}
 		}
 
 		private void updateBtn_Click(object sender, EventArgs e) {
-			string fullUrl = $"{url}/EditSmartphone";
-			SmartphoneDTO s = new SmartphoneDTO {
-				Id = this.phoneId,
-				Name = nameInput.Text,
-				Brand = brandInput.Items[brandInput.SelectedIndex].ToString(),
-				Price = decimal.Parse(priceInput.Text),
-				RAM = Int32.Parse(ramInput.Text),
-				CpuSpeed = float.Parse(cpuInput.Text),
-				SimCardType = simTypeInput.SelectedItem.ToString(),
-			};
-			var js = JsonConvert.SerializeObject(s);
-			webClient.Headers["Content-type"] = "application/json";
-			webClient.Encoding = Encoding.UTF8;
-			webClient.UploadString(fullUrl, "POST", js);
-
+			try {
+				string fullUrl = $"{url}/EditSmartphone";
+				SmartphoneDTO s = new SmartphoneDTO {
+					Id = this.phoneId,
+					Name = nameInput.Text,
+					Brand = brandInput.Items[brandInput.SelectedIndex].ToString(),
+					Price = decimal.Parse(priceInput.Text),
+					RAM = Int32.Parse(ramInput.Text),
+					CpuSpeed = float.Parse(cpuInput.Text),
+					SimCardType = simTypeInput.SelectedItem.ToString(),
+				};
+				var js = JsonConvert.SerializeObject(s);
+				webClient.Headers["Content-type"] = "application/json";
+				webClient.Encoding = Encoding.UTF8;
+				webClient.UploadString(fullUrl, "POST", js);
+			} catch (Exception) {
+				throw;
+			}
 		}
 	}
 }

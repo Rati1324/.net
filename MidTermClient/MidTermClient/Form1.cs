@@ -21,12 +21,17 @@ namespace MidTermClient {
 		}
 
 		private void importBtn_Click(object sender, EventArgs e) {
-			string fullUrl = $"{url}/GetAllSmartphones";
-			webClient.Encoding = Encoding.UTF8;
-			var res = webClient.DownloadString(fullUrl);
-			List<SmartphoneDTO> data = JsonConvert.DeserializeObject<List<SmartphoneDTO>>(res);
-			phonesGrid.DataSource = data;
-			phonesGrid.Columns["id"].Visible = false;
+			try {
+				string fullUrl = $"{url}/GetAllSmartphones";
+				webClient.Encoding = Encoding.UTF8;
+				var res = webClient.DownloadString(fullUrl);
+				List<SmartphoneDTO> data = JsonConvert.DeserializeObject<List<SmartphoneDTO>>(res);
+				phonesGrid.DataSource = data;
+				phonesGrid.Columns["id"].Visible = false;
+
+			} catch (Exception ex) {
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void addBtn_Click(object sender, EventArgs e) {
@@ -35,15 +40,20 @@ namespace MidTermClient {
 		}
 
 		private void deleteBtn_Click(object sender, EventArgs e) {
-			string fullUrl = $"{url}/DeletePhone";
-			string phoneId = phonesGrid.SelectedRows[0].Cells[0].Value.ToString();
-			webClient.Headers["Content-type"] = "application/json";
-			MemoryStream ms = new MemoryStream();
-			DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(string));
-			ser.WriteObject(ms, phoneId);
+			try {
+				string fullUrl = $"{url}/DeletePhone";
+				string phoneId = phonesGrid.SelectedRows[0].Cells[0].Value.ToString();
+				webClient.Headers["Content-type"] = "application/json";
+				MemoryStream ms = new MemoryStream();
+				DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(string));
+				ser.WriteObject(ms, phoneId);
 
-			webClient.Encoding = Encoding.UTF8;
-			var res = webClient.UploadData($"{fullUrl}/{phoneId}", "DELETE", ms.ToArray());
+				webClient.Encoding = Encoding.UTF8;
+				webClient.UploadData($"{fullUrl}/{phoneId}", "DELETE", ms.ToArray());
+
+			} catch (Exception ex) {
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void editBtn_Click(object sender, EventArgs e) {

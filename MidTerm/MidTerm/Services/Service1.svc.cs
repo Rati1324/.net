@@ -84,18 +84,22 @@ namespace MidTerm {
 					db.SaveChanges();
 				}
 			} catch (Exception) {
-
 				throw;
 			}
 		}
 		public List<List<string>> GetFields() {
-			using (Model1 db = new Model1()) {
+			try {
+				using (Model1 db = new Model1()) {
 				List<List<string>> fields = new List<List<string>>();
 				var simTypes = db.SimCardTypes.Select(i => i.name).ToList();
 				var brands = db.Brands.Select(i => i.name ).ToList();
 				fields.Add(simTypes);
 				fields.Add(brands);
 				return fields;
+			}
+			} catch (Exception) {
+
+				throw;
 			}
 		}
 	}
