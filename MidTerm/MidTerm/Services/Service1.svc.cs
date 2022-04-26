@@ -60,7 +60,6 @@ namespace MidTerm {
 					db.SaveChanges();
 				}
 			} catch (Exception) {
-
 				throw;
 			}
 		}

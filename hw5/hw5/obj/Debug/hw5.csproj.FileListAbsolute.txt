@@ -11,3 +11,16 @@ C:\Users\rati\source\repos\hw5\hw5\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\rati\source\repos\hw5\hw5\bin\Debug\EntityFramework.xml
 C:\Users\rati\source\repos\hw5\hw5\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\rati\source\repos\hw5\hw5\obj\Debug\hw5.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\hw5\hw5\bin\Debug\hw5.exe.config
+C:\Users\rati\Documents\programming\.net\hw5\hw5\bin\Debug\hw5.exe
+C:\Users\rati\Documents\programming\.net\hw5\hw5\bin\Debug\hw5.pdb
+C:\Users\rati\Documents\programming\.net\hw5\hw5\bin\Debug\EntityFramework.dll
+C:\Users\rati\Documents\programming\.net\hw5\hw5\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rati\Documents\programming\.net\hw5\hw5\bin\Debug\EntityFramework.xml
+C:\Users\rati\Documents\programming\.net\hw5\hw5\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rati\Documents\programming\.net\hw5\hw5\obj\Debug\hw5.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\hw5\hw5\obj\Debug\hw5.ProjectInstaller.resources
+C:\Users\rati\Documents\programming\.net\hw5\hw5\obj\Debug\hw5.csproj.GenerateResource.cache
+C:\Users\rati\Documents\programming\.net\hw5\hw5\obj\Debug\hw5.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\hw5\hw5\obj\Debug\hw5.exe
+C:\Users\rati\Documents\programming\.net\hw5\hw5\obj\Debug\hw5.pdb
