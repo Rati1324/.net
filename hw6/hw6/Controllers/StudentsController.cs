@@ -6,7 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-
+using System.Web.Http.Description;
 
 namespace hw6.Controllers {
 	public class StudentsController : ApiController {
@@ -25,6 +25,7 @@ namespace hw6.Controllers {
 		}
 
 		// GET: Student
+		[ResponseType(typeof(StudentDTO))]
 		public IHttpActionResult GetStudent(int id) {
 			var student = db.Students.FirstOrDefault(i => i.Id == id);
 			if (student == null) {
@@ -40,6 +41,7 @@ namespace hw6.Controllers {
 			return Ok(result);
 		}
 
+		[ResponseType(typeof(bool))]
 		public IHttpActionResult PutStudent(StudentDTO S) {
 			if (!ModelState.IsValid)
 				return BadRequest(ModelState);
@@ -61,6 +63,8 @@ namespace hw6.Controllers {
 			}
 			return Ok(true);
 		}
+
+		[ResponseType(typeof(StudentDTO))]
 		public IHttpActionResult PostStudent(StudentDTO S) {
 			if (!ModelState.IsValid)
 				return BadRequest(ModelState);
@@ -75,6 +79,7 @@ namespace hw6.Controllers {
 			return Ok(true);
 		}
 
+		[ResponseType(typeof(bool))]
 		public IHttpActionResult DeleteStudent(int Id) {
 			Student s = db.Students.FirstOrDefault(i => i.Id == Id);
 			if (s == null)
