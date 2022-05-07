@@ -1,18 +1,31 @@
 ﻿using hw6.EF;
 using hw6.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Mvc;
 
 namespace hw6.Controllers {
 	public class StudentsController : ApiController {
 		private EduDb db = new EduDb();
 
-		// GET: Students
+		[System.Web.Http.HttpGet]
+		[System.Web.Http.Route("student_id")]
+		public int StudentId([FromUri]string firstName, [FromUri]string lastName) {
+			var result = db.Students.Where(s => s.FirstName == firstName && s.LastName == lastName).Select(s => s.Id).First();
+			return result;
+		}
+
+		[System.Web.Http.HttpGet]
+		[System.Web.Http.Route("students", Name = "students")]
 		public IHttpActionResult GetStudents() {
 			var result = db.Students.Select(i => new StudentDTO {
 				Id = i.Id,
@@ -20,11 +33,11 @@ namespace hw6.Controllers {
 				LastName = i.LastName,
 				BirthDate = i.BirthDate,
 				GPA = (float)i.GPA,
-			});
+			}).ToList();
 			return Json(result);
 		}
 
-		// GET: Student
+		[System.Web.Http.Route("student/{id}", Name = "student")]
 		[ResponseType(typeof(StudentDTO))]
 		public IHttpActionResult GetStudent(int id) {
 			var student = db.Students.FirstOrDefault(i => i.Id == id);
@@ -38,14 +51,13 @@ namespace hw6.Controllers {
 				BirthDate = student.BirthDate,
 				GPA = (float)student.GPA
 			};
-			return Ok(result);
+			return Json(result);
 		}
 
 		[ResponseType(typeof(bool))]
 		public IHttpActionResult PutStudent(StudentDTO S) {
 			if (!ModelState.IsValid)
 				return BadRequest(ModelState);
-
 			try {
 				Student s = db.Students.FirstOrDefault(i => i.Id == S.Id);
 				s.Id = S.Id;
@@ -54,6 +66,7 @@ namespace hw6.Controllers {
 				s.BirthDate = S.BirthDate;
 				s.GPA = S.GPA;
 				db.SaveChanges();
+				return RedirectToRoute("student", new { id = s.Id });
 			} 
 			catch (DbUpdateConcurrencyException) {
 				if (S == null)
@@ -64,8 +77,10 @@ namespace hw6.Controllers {
 			return Ok(true);
 		}
 
+		[System.Web.Http.HttpPost]
+		[System.Web.Http.Route("add_student")]
 		[ResponseType(typeof(StudentDTO))]
-		public IHttpActionResult PostStudent(StudentDTO S) {
+		public async Task<IHttpActionResult> PostStudent(StudentDTO S) {
 			if (!ModelState.IsValid)
 				return BadRequest(ModelState);
 			Student s = new Student {
@@ -74,9 +89,13 @@ namespace hw6.Controllers {
 				BirthDate = S.BirthDate,
 				GPA = S.GPA
 			};
-			db.Students.Add(s);
-			db.SaveChanges();
-			return Ok(true);
+			try {
+				db.Students.Add(s);
+				await db.SaveChangesAsync();
+				return CreatedAtRoute("students", new { id = s.Id }, s);
+			} catch (Exception) {
+				throw;
+			}
 		}
 
 		[ResponseType(typeof(bool))]
