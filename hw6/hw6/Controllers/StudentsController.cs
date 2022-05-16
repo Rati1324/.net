@@ -1,5 +1,4 @@
-﻿using hw6.EF;
-using hw6.Models;
+﻿using hw6.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,8 +14,9 @@ using System.Web.Mvc;
 
 namespace hw6.Controllers {
 	public class StudentsController : ApiController {
-		private EduDb db = new EduDb();
+		private Edu db = new Edu();
 
+		// url dan ighebs studentis saxels da gvars da abrunebs studentis id-s (int)
 		[System.Web.Http.HttpGet]
 		[System.Web.Http.Route("student_id")]
 		public int StudentId([FromUri]string firstName, [FromUri]string lastName) {
@@ -66,7 +66,7 @@ namespace hw6.Controllers {
 				s.BirthDate = S.BirthDate;
 				s.GPA = S.GPA;
 				db.SaveChanges();
-				return RedirectToRoute("student", new { id = s.Id });
+				return Ok(true);
 			} 
 			catch (DbUpdateConcurrencyException) {
 				if (S == null)
@@ -74,7 +74,6 @@ namespace hw6.Controllers {
 				else
 					throw;
 			}
-			return Ok(true);
 		}
 
 		[System.Web.Http.HttpPost]
@@ -92,7 +91,7 @@ namespace hw6.Controllers {
 			try {
 				db.Students.Add(s);
 				await db.SaveChangesAsync();
-				return CreatedAtRoute("students", new { id = s.Id }, s);
+				return CreatedAtRoute("student", new { id = s.Id }, s);
 			} catch (Exception) {
 				throw;
 			}

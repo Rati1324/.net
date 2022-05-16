@@ -1,4 +1,4 @@
-namespace hw6.EF
+namespace hw6
 {
     using System;
     using System.Collections.Generic;
