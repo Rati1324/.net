@@ -15,7 +15,6 @@ namespace hw6.Controllers
 {
 	public class LecturerController : ApiController {
 		private Edu db = new Edu();
-
 		[System.Web.Http.HttpGet]
 		[System.Web.Http.Route("lecturers")]
 		public IHttpActionResult GetLecturers() {
@@ -51,7 +50,7 @@ namespace hw6.Controllers
 
 		// amatebs leqtors da abrunebs im leqtoris obieqts jsonshi da headerebshi urls
 		// abrunebs damatebuli leqtoris gverdistvis
-		[System.Web.Http.HttpGet]
+		[System.Web.Http.HttpPost]
 		[System.Web.Http.Route("add_lecturer")]
 		public async Task<IHttpActionResult> AddLecturer(LecturerDTO L) {
 			try {
@@ -63,7 +62,6 @@ namespace hw6.Controllers
 				db.Lecturers.Add(l);
 				await db.SaveChangesAsync();
 				return CreatedAtRoute("lecturer", new { firstName = l.FirstName, lastName = l.LastName }, l);
-				//return RedirectToRoute("lecturer", new { firstName = l.FirstName, lastName = l.LastName });
 			} catch (Exception) {
 				throw;
 			}
