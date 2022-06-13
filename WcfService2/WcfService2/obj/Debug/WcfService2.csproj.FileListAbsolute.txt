@@ -1,0 +1,7 @@
+C:\Users\rati\Documents\programming\.net\WcfService2\WcfService2\bin\WcfService2.dll.config
+C:\Users\rati\Documents\programming\.net\WcfService2\WcfService2\bin\WcfService2.dll
+C:\Users\rati\Documents\programming\.net\WcfService2\WcfService2\bin\WcfService2.pdb
+C:\Users\rati\Documents\programming\.net\WcfService2\WcfService2\obj\Debug\WcfService2.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\WcfService2\WcfService2\obj\Debug\WcfService2.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\WcfService2\WcfService2\obj\Debug\WcfService2.dll
+C:\Users\rati\Documents\programming\.net\WcfService2\WcfService2\obj\Debug\WcfService2.pdb

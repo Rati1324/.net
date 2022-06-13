@@ -1,0 +1,10 @@
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\bin\Debug\CarRentalClient.exe.config
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\bin\Debug\CarRentalClient.exe
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\bin\Debug\CarRentalClient.pdb
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.Form1.resources
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.Properties.Resources.resources
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.csproj.GenerateResource.cache
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.exe
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.pdb

@@ -27,3 +27,4 @@ C:\Users\rati\Documents\programming\.net\Lesson3\FirstWcfService\obj\Debug\First
 C:\Users\rati\Documents\programming\.net\Lesson3\FirstWcfService\obj\Debug\FirstWcfService.dll
 C:\Users\rati\Documents\programming\.net\Lesson3\FirstWcfService\obj\Debug\FirstWcfService.pdb
 C:\Users\rati\Documents\programming\.net\Lesson3\FirstWcfService\obj\Debug\FirstWcfService.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\Lesson3\FirstWcfService\obj\Debug\FirstWcfService.csproj.CopyComplete
