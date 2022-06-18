@@ -43,6 +43,7 @@ namespace CarRentalClient {
 			this.speedInput = new System.Windows.Forms.TextBox();
 			this.priceInput = new System.Windows.Forms.TextBox();
 			this.licenseIntput = new System.Windows.Forms.TextBox();
+			this.saveBtn = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// insertBtn
@@ -202,11 +203,22 @@ namespace CarRentalClient {
 			this.licenseIntput.Size = new System.Drawing.Size(154, 20);
 			this.licenseIntput.TabIndex = 2;
 			// 
+			// saveBtn
+			// 
+			this.saveBtn.Location = new System.Drawing.Point(316, 401);
+			this.saveBtn.Name = "saveBtn";
+			this.saveBtn.Size = new System.Drawing.Size(75, 23);
+			this.saveBtn.TabIndex = 4;
+			this.saveBtn.Text = "Save";
+			this.saveBtn.UseVisualStyleBackColor = true;
+			this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+			// 
 			// InputForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(698, 544);
+			this.Controls.Add(this.saveBtn);
 			this.Controls.Add(this.typeInput);
 			this.Controls.Add(this.fuelInput);
 			this.Controls.Add(this.transmissionInput);
@@ -254,5 +266,6 @@ namespace CarRentalClient {
 		private System.Windows.Forms.TextBox speedInput;
 		private System.Windows.Forms.TextBox priceInput;
 		private System.Windows.Forms.TextBox licenseIntput;
+		private System.Windows.Forms.Button saveBtn;
 	}
 }

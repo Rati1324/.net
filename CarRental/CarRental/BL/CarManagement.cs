@@ -7,8 +7,10 @@ using System.Web;
 namespace CarRental.BL {
 	public class CarManagement {
 		public static List<CarDTO> GetAllCars() {
-			using (CarRentalModel db = new CarRentalModel()) {
+			try {
+				using (CarRentalModel db = new CarRentalModel()) {
 				return db.Cars.Select(i => new CarDTO {
+					Id = i.id,
 					Name = i.name,
 					Year = (int)i.year,
 					BodyType = (int)i.body_type,
@@ -20,6 +22,10 @@ namespace CarRental.BL {
 					LicenseNumber = i.license_number,
 				}).ToList();
 			}
+			} catch (Exception) {
+				throw;
+			}
+			
 		}
 		public static void AddNewCar(CarDTO car) {
 			try {

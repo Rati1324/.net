@@ -12,6 +12,9 @@ namespace CarRental {
 	public class CarDTO {
 		[DataMember]
 		[XmlElement]
+		public int Id { get; set; }
+		[DataMember]
+		[XmlElement]
 		public string Name { get; set; }
 		[DataMember]
 		[XmlElement]

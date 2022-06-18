@@ -10,6 +10,8 @@ namespace CarRentalClient.Classes {
 	[Serializable]
 	public class CarDTO {
 		[XmlElement]
+		public int Id { get; set; }
+		[XmlElement]
 		public string Name { get; set; }
 		[XmlElement]
 		public int Year { get; set; }
