@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace CarRentalClient.Classes {
@@ -19,6 +20,16 @@ namespace CarRentalClient.Classes {
 				result = (T)deser.Deserialize(r);
 			}
 			return result;
+		}
+
+		public static XmlDocument Serialize<T>(T source) {
+			var document = new XmlDocument { XmlResolver = null };
+			var navigator = document.CreateNavigator();
+			using (var writer = navigator.AppendChild()) {
+				var serializer = new XmlSerializer(typeof(T));
+				serializer.Serialize(writer, source);
+			}
+			return document;
 		}
 	}
 }

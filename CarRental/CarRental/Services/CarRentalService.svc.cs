@@ -6,17 +6,24 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 using CarRental.EF;
+using CarRental.BL;
+using System.Collections;
 
 namespace CarRental {
-	// NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "CarRentalService" in code, svc and config file together.
-	// NOTE: In order to launch WCF Test Client for testing this service, please select CarRentalService.svc or CarRentalService.svc.cs at the Solution Explorer and start debugging.
 	public class CarRentalService : ICarRentalService {
-		public List<CarDTO> GetAllCars() {
+		public List<CarDTO> GetAllCars() => CarManagement.GetAllCars();
+		public void AddNewCar(CarDTO car) => CarManagement.AddNewCar(car);
+		public List<List<string>> GetComboboxValues() {
+			List<List<string>> result = new List<List<string>>();
 			using (CarRentalModel db = new CarRentalModel()) {
-				return db.Cars.Select(i => new CarDTO {
-					Name = i.name
-				}).ToList();
+				result.Add(db.CarBodyTypes.Select(i => i.id.ToString()).ToList());
+				result.Add(db.CarBodyTypes.Select(i => i.name.ToString()).ToList());
+				result.Add(db.TransmissionTypes.Select(i => i.id.ToString()).ToList());
+				result.Add(db.TransmissionTypes.Select(i => i.name.ToString()).ToList());
+				result.Add(db.FuelTypes.Select(i => i.id.ToString()).ToList());
+				result.Add(db.FuelTypes.Select(i => i.name.ToString()).ToList());
 			}
+			return result;
 		}
 	}
 }

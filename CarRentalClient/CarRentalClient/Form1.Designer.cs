@@ -26,6 +26,7 @@ namespace CarRentalClient {
 		private void InitializeComponent() {
 			this.carsGrid = new System.Windows.Forms.DataGridView();
 			this.importBtn = new System.Windows.Forms.Button();
+			this.insertBtn = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.carsGrid)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -47,11 +48,22 @@ namespace CarRentalClient {
 			this.importBtn.UseVisualStyleBackColor = true;
 			this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
 			// 
+			// insertBtn
+			// 
+			this.insertBtn.Location = new System.Drawing.Point(154, 26);
+			this.insertBtn.Name = "insertBtn";
+			this.insertBtn.Size = new System.Drawing.Size(75, 23);
+			this.insertBtn.TabIndex = 2;
+			this.insertBtn.Text = "Insert";
+			this.insertBtn.UseVisualStyleBackColor = true;
+			this.insertBtn.Click += new System.EventHandler(this.insertBtn_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(730, 428);
+			this.Controls.Add(this.insertBtn);
 			this.Controls.Add(this.importBtn);
 			this.Controls.Add(this.carsGrid);
 			this.Name = "Form1";
@@ -65,6 +77,7 @@ namespace CarRentalClient {
 
 		private System.Windows.Forms.DataGridView carsGrid;
 		private System.Windows.Forms.Button importBtn;
+		private System.Windows.Forms.Button insertBtn;
 	}
 }
 

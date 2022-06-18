@@ -10,3 +10,15 @@ C:\Users\rati\source\repos\CarRental\CarRental\obj\Debug\CarRental.csproj.CoreCo
 C:\Users\rati\source\repos\CarRental\CarRental\obj\Debug\CarRental.csproj.CopyComplete
 C:\Users\rati\source\repos\CarRental\CarRental\obj\Debug\CarRental.dll
 C:\Users\rati\source\repos\CarRental\CarRental\obj\Debug\CarRental.pdb
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\bin\CarRental.dll.config
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\bin\CarRental.dll
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\bin\CarRental.pdb
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\bin\EntityFramework.dll
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\bin\EntityFramework.SqlServer.dll
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\bin\EntityFramework.xml
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\bin\EntityFramework.SqlServer.xml
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\obj\Debug\CarRental.csproj.AssemblyReference.cache
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\obj\Debug\CarRental.csproj.CoreCompileInputs.cache
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\obj\Debug\CarRental.csproj.CopyComplete
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\obj\Debug\CarRental.dll
+C:\Users\rati\Documents\programming\.net\CarRental\CarRental\obj\Debug\CarRental.pdb

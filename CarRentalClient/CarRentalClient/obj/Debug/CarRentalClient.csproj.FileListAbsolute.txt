@@ -8,3 +8,4 @@ C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Deb
 C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.csproj.CoreCompileInputs.cache
 C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.exe
 C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.pdb
+C:\Users\rati\Documents\programming\.net\CarRentalClient\CarRentalClient\obj\Debug\CarRentalClient.InputForm.resources
